@@ -31,7 +31,7 @@ let propiedades_alquiler = [
   },
   {
     nombre: "Casa en Concón",
-    src: "assets/img/propiedad1.avif",
+    src: "assets/img/propiedad4.avif",
     descripcion: "Lujosa casa con piscina y áreas comunes. Ideal para pasar tiempo en familia y disfrutar de la tranquilidad.",
     ubicacion: "Concón",
     habitaciones: "6",
@@ -41,7 +41,7 @@ let propiedades_alquiler = [
   },
   {
     nombre: "Casa en Las Docas",
-    src: "assets/img/propiedad2.avif",
+    src: "assets/img/propiedad5.avif",
     descripcion: "Casa de campo con hermosos paisajes y acceso a actividades al aire libre. Perfecta para disfrutar de la naturaleza.",
     ubicacion: "Las Docas",
     habitaciones: "4",
@@ -51,7 +51,7 @@ let propiedades_alquiler = [
   },
   {
     nombre: "Casa en Rancagua",
-    src: "assets/img/propiedad3.avif",
+    src: "assets/img/propiedad6.avif",
     descripcion: "Propiedad con estilo moderno, ideal para quienes buscan una experiencia tranquila y cercana al campo.",
     ubicacion: "Rancagua",
     habitaciones: "3",
@@ -64,7 +64,7 @@ let propiedades_alquiler = [
 let propiedades_ventas = [
   {
     nombre: "Casa en Maitencillo",
-    src: "assets/img/propiedad1.avif",
+    src: "assets/img/propiedad7.avif",
     descripcion: "Elegante casa con vista al mar, ubicada en un exclusivo sector de Maitencillo. Incluye piscina y amplio jardín.",
     ubicacion: "Maitencillo",
     habitaciones: "5",
@@ -74,7 +74,7 @@ let propiedades_ventas = [
   },
   {
     nombre: "Casa en Zapallar",
-    src: "assets/img/propiedad2.avif",
+    src: "assets/img/propiedad8.avif",
     descripcion: "Moderno departamento en la playa con excelentes terminaciones, perfecto para disfrutar todo el año.",
     ubicacion: "Zapallar",
     habitaciones: "3",
@@ -84,7 +84,7 @@ let propiedades_ventas = [
   },
   {
     nombre: "Casa en Quintero",
-    src: "assets/img/propiedad3.avif",
+    src: "assets/img/propiedad9.avif",
     descripcion: "Espaciosa casa familiar en un sector tranquilo de Quintero. Cuenta con quincho y terraza con vista panorámica.",
     ubicacion: "Quintero",
     habitaciones: "4",
@@ -94,7 +94,7 @@ let propiedades_ventas = [
   },
   {
     nombre: "Casa en Algarrobo",
-    src: "assets/img/propiedad3.avif",
+    src: "assets/img/propiedad10.avif",
     descripcion: "Penthouse de lujo en el corazón de Algarrobo. Con acceso directo a servicios y espacios comunes premium.",
     ubicacion: "Algarrobo",
     habitaciones: "3",
@@ -104,7 +104,7 @@ let propiedades_ventas = [
   },
   {
     nombre: "Casa en Olmué",
-    src: "assets/img/propiedad2.avif",
+    src: "assets/img/propiedad11.avif",
     descripcion: "Exclusiva propiedad con una vista espectacular al campo. Ideal para quienes buscan paz y tranquilidad.",
     ubicacion: "Olmué",
     habitaciones: "6",
@@ -114,7 +114,7 @@ let propiedades_ventas = [
   },
   {
     nombre: "Casa en Limache",
-    src: "assets/img/propiedad1.avif",
+    src: "assets/img/propiedad12.avif",
     descripcion: "Casa frente al valle, con acceso privado a senderos y una gran terraza para disfrutar de las vistas naturales.",
     ubicacion: "Limache",
     habitaciones: "4",

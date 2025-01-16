@@ -157,7 +157,7 @@ section {
   height: 6rem;
   background: linear-gradient(45deg, #4e1c9e, var(--primary));
   background-size: 300% 300%;
-  animation: gradientAnimation 3s ease infinite;
+  animation: gradiente 2s ease infinite;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,7 +177,7 @@ input {
   background-color: #ff94ff;
 }
 
-@keyframes gradientAnimation {
+@keyframes gradiente {
   0% {
     background-position: 0% 50%;
   }
@@ -211,6 +211,19 @@ input {
   flex-direction: column;
   width: 100%;
   gap: 2rem;
+  animation: cambioFondo 15s infinite;
+}
+
+@keyframes cambioFondo {
+  0% {
+    background-image: url('../img/hero.jpg');
+  }
+  50% {
+    background-image: url('../img/hero2.avif');
+  }
+  100% {
+    background-image: url('../img/hero.jpg');
+  }
 }
 
 .hero h1 {
