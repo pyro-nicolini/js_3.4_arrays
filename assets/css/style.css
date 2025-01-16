@@ -3,8 +3,17 @@
 :root {
   --bg: #ffffff;
   --primary: #2d0772;
-  --yellow: #e7c83c;
-  --gris: #afafaf;
+  --yellow: #e7bd00;
+  --yellow2: #fc8600;
+  --gris: #cecece;
+}
+
+html {
+  transition: all 0.3s ease-in-out;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
@@ -13,6 +22,10 @@ body {
   color: var(--primary);
   margin: 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -20,20 +33,30 @@ h1 {
     color: var(--bg);
     margin: 0;
 }
+
 h2 {
   font-size: 2.5rem;
   color: var(--primary);
   margin: 0;
 }
-header h2 {
-  font-size: 2.5rem;
-  color: var(--bg);
+
+header p {
+  top: -50px;
   margin: 0;
+  font-size: 1.2rem;
 }
+
+header img {
+  width: 20rem;
+  height: 3rem;
+}
+
 h3 {
     font-size: 1.8rem;
+    font-weight: 600;
     color: var(--primary);
     margin: 0;
+    text-transform: uppercase;
 }
 
 .red {
@@ -54,6 +77,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 2;
+  height: 7rem;
 }
 
 header div {
@@ -74,16 +98,23 @@ header nav ul li a {
   font-weight: bold;
 }
 
-button {
+.boton {
   color: var(--bg);
-  background-color: var(--yellow);
+  background-color: var(--yellow2);
   padding: 0.5rem 1rem;
   font-weight: 600;
   border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.boton:hover {
+  background-color: rgb(255, 81, 0);
+  transform: scale(1.1);
 }
 
 main {
-  margin-bottom: 3rem;
+  margin-top: 3.5rem;
+  width: 100%;
 }
 
 section {
@@ -93,6 +124,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 3rem;
 }
 
 .banner {
@@ -107,14 +139,21 @@ span {
     background-color: var(--primary);
     color: var(--yellow);
     padding: .6rem 1.5rem;
-    font-size: 2rem;
+    font-size: 2.1rem;
     margin: 0;
-    border-radius: 10px;
 }
+
+.ubiposs {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  margin: 0;
+}
+
 .ubi {
+  margin: 0;
     position: relative;
-    top: 30px;
-    right: -180px;
+    top: 2.8rem;
     color: var(--bg);
     background-color: var(--primary);
     padding: .2rem;
@@ -123,8 +162,14 @@ span {
     border-radius: 10px;
 }
 
+.ubi i {
+  color: var(--yellow);
+  margin-right: .3rem;
+}
+
+
 .seccion {
-  width: 80%;
+  width: 70%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   justify-content: center;
@@ -173,4 +218,5 @@ footer {
   color: var(--bg);
   padding: 10px 0;
   font-size: 0.9rem;
+  width: 100%;
 }
