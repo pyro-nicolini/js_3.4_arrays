@@ -88,15 +88,16 @@ header div {
 
 .botonh {
   color: var(--bg);
-  background-color: var(--celeste);
+  border: 2px solid white;
   padding: 0.1rem .3rem;
   border-radius: 5px;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
   transition: all 0.1s ease-in-out;
+  text-decoration: none;
 }
 
 .botonh:hover {
-  background-color: rgb(81, 0, 148);
+  background-color: rgb(221, 125, 0);
   transform: scale(1.02);
 }
 
@@ -108,6 +109,7 @@ header div {
   border-radius: 10px;
   transition: all 0.1s ease-in-out;
   box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
 }
 
 .boton:hover {
@@ -131,10 +133,43 @@ section {
 }
 
 .banner {
-    width: 100%;
-    height: 6rem;
-    background-color: var(--primary);
+  width: 100%;
+  height: 6rem;
+  background: linear-gradient(45deg, #ff7eb3, #c20427);
+  background-size: 300% 300%;
+  animation: gradientAnimation 3s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+input {
+  height: 1.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  border: solid 2px var(--bg);
+  background-color: #ff94ff;
+}
+
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 span {
     position: relative;
@@ -210,6 +245,7 @@ span {
     box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.5);
     transition: all 0.1s ease-in-out;
     text-align: center;
+    text-decoration: none;
 }
 
 .hero a:hover {
