@@ -17,6 +17,11 @@ a {
   text-decoration: none;
 }
 
+p {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background-color: var(--bg);
   font-family: "Poppins", sans-serif;
@@ -164,7 +169,7 @@ section {
 }
 
 input {
-  height: 1.3rem;
+  height: 1.8rem;
   font-size: 1rem;
   font-weight: 600;
   color: var(--primary);
@@ -232,14 +237,28 @@ input {
 .card {
   background-color: var(--bg);
   border-radius: 10px;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.6);
   text-align: center;
+  padding-top: 1rem;
 }
 
 .card p {
   font-size: 1rem;
   font-weight: 400;
+  padding: 0;
+}
+
+.card i {
+  font-size: 1.3rem;
+  margin-right: .5rem;
+}
+
+.left {
+text-align: start;
+margin-left: 1rem;
+padding: 0;
+margin:1rem;
 }
 
 .card img {
@@ -266,24 +285,28 @@ align-items: center;
 margin: 0;
 padding: 0;
 line-height: 0;
-height: 35px;
 }
 
 .ubi {
+font-size: 2rem;
 margin: 0;
 position: relative;
-top: 2.8rem;
+top: 2.5rem;
 color: var(--bg);
 background-color: var(--primary);
-padding: .3rem;
-font-size: 1.2rem;
 width: 150px;
+height: 2rem;
 border-radius: 7px;
+align-items: center;
+justify-content: center;
+text-align: center;
 }
 
 .ubi i {
 color: var(--yellow);
 margin-right: .3rem;
+margin: .3rem 0;
+font-size: 1.3rem;
 }
 
 footer {
