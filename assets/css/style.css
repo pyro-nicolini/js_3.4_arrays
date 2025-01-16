@@ -105,6 +105,7 @@ header nav ul li a {
   font-weight: 600;
   border-radius: 10px;
   transition: all 0.2s ease-in-out;
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.5);
 }
 
 .boton:hover {
@@ -188,13 +189,20 @@ span {
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  gap: 2rem;
+}
+
+.hero h1 {
+    text-shadow: 3px 3px 5px #1d1d1d;
 }
 
 .hero a {
-    background-color: var(--primary);
+    background-color: var(--yellow2);
     color: var(--bg);
-    padding: 2rem 4rem;
+    padding: .5rem 1rem;
     font-size: 2rem;
+    border-radius: 10px;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.5);
 }
 
 .card {
@@ -219,4 +227,11 @@ footer {
   padding: 10px 0;
   font-size: 0.9rem;
   width: 100%;
+}
+
+@media (max-width: 600px) {
+  header {
+    height: 10rem;
+    flex-direction: column;
+  }
 }

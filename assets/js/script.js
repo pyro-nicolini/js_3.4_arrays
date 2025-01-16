@@ -161,13 +161,13 @@ function mostrarPropiedades(array, contenedorReceptor, cantidadCards) {
   contenedorReceptor.innerHTML = inyector;
 }
 
+// condicionamos la existencia de los contendores (para evitar usar la funcion en una pagina que no tenga el contenedor)
 if (contenedor_ventas){
   mostrarPropiedades(propiedades_ventas, contenedor_ventas, 3)
 }  
 if (contenedor_ventasCompleto){
   mostrarPropiedades(propiedades_ventas, contenedor_ventasCompleto)
 }
-
 if (contenedor_arriendos){
   mostrarPropiedades(propiedades_alquiler, contenedor_arriendos, 3) // paramétros :  selector de array , cantidad de objetos seleccionados, contenedor que recibe la información. 
 }
