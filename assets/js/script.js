@@ -7,7 +7,7 @@ let propiedades_alquiler = [
     habitaciones: "4",
     costos: "13.900 UF",
     pets: true,
-    smoking: true,
+    smoke: true,
   },
   {
     nombre: "Maitencillo2",
@@ -17,7 +17,7 @@ let propiedades_alquiler = [
     habitaciones: "4",
     costos: "13.900 UF",
     pets: true,
-    smoking: true,
+    smoke: true,
   },
   {
     nombre: "Maitencillo3",
@@ -27,7 +27,7 @@ let propiedades_alquiler = [
     habitaciones: "4",
     costos: "13.900 UF",
     pets: true,
-    smoking: true,
+    smoke: true,
   },
   {
     nombre: "Maitencillo3",
@@ -37,7 +37,7 @@ let propiedades_alquiler = [
     habitaciones: "4",
     costos: "13.900 UF",
     pets: true,
-    smoking: true,
+    smoke: true,
   },
 ];
 
@@ -50,7 +50,7 @@ let propiedades_ventas = [
     habitaciones: "5",
     costos: "25.500 UF",
     pets: false,
-    smoking: false,
+    smoke: false,
   },
   {
     nombre: "Concón2",
@@ -60,7 +60,7 @@ let propiedades_ventas = [
     habitaciones: "3",
     costos: "18.200 UF",
     pets: true,
-    smoking: true,
+    smoke: true,
   },
   {
     nombre: "Reñaca3",
@@ -70,7 +70,7 @@ let propiedades_ventas = [
     habitaciones: "4",
     costos: "22.300 UF",
     pets: true,
-    smoking: false,
+    smoke: false,
   },
   {
     nombre: "Viña del Mar4",
@@ -80,7 +80,7 @@ let propiedades_ventas = [
     habitaciones: "3",
     costos: "30.000 UF",
     pets: true,
-    smoking: false,
+    smoke: false,
   },
 ];
 
@@ -90,24 +90,36 @@ const arriendos = document.getElementById("arriendos");
 let inyeccion_ventas = "";
 let inyeccion_alquiler = "";
 
-for (let edif of propiedades_alquiler) {
+for (let edif of propiedades_alquiler.slice(0,3)) {
   inyeccion_alquiler += `
     <div class="card">
     <h3>${edif.nombre}</h3>
+    <div>
+    <p class="ubi">${edif.ubicación}</p>
     <img src="${edif.src}" alt="Card image cap">
-    <p>${edif.desc}</p>
+    <span>${edif.costos}</span>
+    </div>
+      <p>${edif.desc}</p>
+      <p>${edif.pets}</p>
+      <p>${edif.smoke}</p>
     </div>
     `;
-}
-
-arriendos.innerHTML = inyeccion_alquiler;
-
-for (let edif of propiedades_ventas) {
-  inyeccion_ventas += `
+  }
+  
+  arriendos.innerHTML = inyeccion_alquiler;
+  
+  for (let edif of propiedades_ventas.slice(0,3)) {
+    inyeccion_ventas += `
     <div class="card">
     <h3>${edif.nombre}</h3>
+    <div>
+    <p class="ubi">${edif.ubicación}</p>
     <img src="${edif.src}" alt="Card image cap">
+    <span>${edif.costos}</span>
+    </div>
     <p>${edif.desc}</p>
+    <p>${edif.pets}</p>
+    <p>${edif.smoke}</p>
     </div>
     `;
 }
