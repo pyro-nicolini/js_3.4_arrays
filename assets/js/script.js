@@ -90,6 +90,14 @@ const arriendos = document.getElementById("arriendos");
 let inyeccion_ventas = "";
 let inyeccion_alquiler = "";
 
+let smoker = `<p class="green">Se puede Fumar</p>`;
+let noSmoker = `<p class="red">No se permite Fumar</p>`;
+
+let pets = `<p class="green">Se permiten Mascotas</p>`;
+let noPets = `<p class="red">No se permiten Mascotas</p>`;
+
+
+
 for (let edif of propiedades_alquiler.slice(0,3)) {
   inyeccion_alquiler += `
     <div class="card">
@@ -100,11 +108,13 @@ for (let edif of propiedades_alquiler.slice(0,3)) {
     <span>${edif.costos}</span>
     </div>
       <p>${edif.desc}</p>
-      <p>${edif.pets}</p>
-      <p>${edif.smoke}</p>
+    ${edif.pets?pets:noPets}
+    ${edif.smoke?smoker:noSmoker}
     </div>
     `;
   }
+
+
   
   arriendos.innerHTML = inyeccion_alquiler;
   
@@ -118,8 +128,8 @@ for (let edif of propiedades_alquiler.slice(0,3)) {
     <span>${edif.costos}</span>
     </div>
     <p>${edif.desc}</p>
-    <p>${edif.pets}</p>
-    <p>${edif.smoke}</p>
+    ${edif.pets?pets:noPets}
+    ${edif.smoke?smoker:noSmoker}
     </div>
     `;
 }
