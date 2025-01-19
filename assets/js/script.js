@@ -139,7 +139,7 @@ let pets = `<p class="green left"><i class="fas fa-paw"></i> Se permiten Mascota
 let noPets = `<p class="red left"><i class="fa-solid fa-ban"></i> No se permiten Mascotas</p>`;
 
 
-function mostrarPropiedades(array, contenedorReceptor, cantidadCards) { // paramétros :  selector de array, contenedor que recibe la información, cantidad de cards que quiero mostrar, 
+function mostrarPropiedades(array, contenedorReceptor, cantidadCards = array.length) { // paramétros :  selector de array, contenedor que recibe la información, cantidad de cards que quiero mostrar, 
 
   let inyector = ""; // Variable para acumular el HTML
 
