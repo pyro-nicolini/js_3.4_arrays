@@ -179,4 +179,6 @@ if (contenedor_arriendosCompleto){
 let input1 = document.getElementById('input');
 let enter = document.getElementById('enter');
 
-enter.addEventListener('click', () => alert(`${input1.value} Subscrito exitósamente`))
+if(input1){
+  enter.addEventListener('click', () => alert(`${input1.value} Subscrito exitósamente`))
+}
