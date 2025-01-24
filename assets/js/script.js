@@ -124,61 +124,41 @@ let propiedades_ventas = [
   },
 ];
 
-
 const contenedor_ventas = document.getElementById("ventas");
 const contenedor_arriendos = document.getElementById("arriendos");
-
 const contenedor_ventasCompleto = document.getElementById("ventasFull");
 const contenedor_arriendosCompleto = document.getElementById("arriendosFull");
-
+const input1 = document.getElementById('input');
+const enter = document.getElementById('enter');
+input1? enter.addEventListener('click', () => alert(`${input1.value} Subscrito exitósamente`)):'';
 
 let smoker = `<p class="green left"><i class="fas fa-smoking"></i> Se puede Fumar</p>`;
 let noSmoker = `<p class="red left"><i class="fas fa-smoking-ban"></i> No se permite Fumar</p>`;
-
 let pets = `<p class="green left"><i class="fas fa-paw"></i> Se permiten Mascotas</p>`;
 let noPets = `<p class="red left"><i class="fa-solid fa-ban"></i> No se permiten Mascotas</p>`;
 
-
-function mostrarPropiedades(array, contenedorReceptor, cantidadCards = array.length) { // paramétros :  selector de array, contenedor que recibe la información, cantidad de cards que quiero mostrar, 
-
-  let inyector = ""; // Variable para acumular el HTML
-
-  for (let edif of array.slice(0, cantidadCards)) {
+function mostrarPropiedades(array, contenedorReceptor, cantidadCards = array.length) { 
+  let inyector = "";
+  for (let prop of array.slice(0, cantidadCards)) {
     inyector += `
       <div class="card">
-        <h3>${edif.nombre}</h3>
+        <h3>${prop.nombre}</h3>
         <div class="ubiposs">
-          <p class="ubi"><i class="fas fa-location-dot"></i> ${edif.ubicacion}</p>
+          <p class="ubi"><i class="fas fa-location-dot"></i> ${prop.ubicacion}</p>
         </div>
-        <img src="${edif.src}" alt="Imagen de ${edif.nombre}">
-        <span>${edif.costos}</span>
-        <p>${edif.descripcion}</p>
-        <p class="left"><i class="fas fa-bed"></i> ${edif.habitaciones} habitaciones</p>
-        ${edif.pets ? pets : noPets}
-        ${edif.smoke ? smoker : noSmoker}
+        <img src="${prop.src}" alt="Imagen de ${prop.nombre}">
+        <span>${prop.costos}</span>
+        <p>${prop.descripcion}</p>
+        <p class="left"><i class="fas fa-bed"></i> ${prop.habitaciones} habitaciones</p>
+        ${prop.pets ? pets : noPets}
+        ${prop.smoke ? smoker : noSmoker}
       </div>
     `;
   }
   contenedorReceptor.innerHTML = inyector;
 }
 
-// condiciono la existencia de los contendores (para evitar ejecutar la función en una pagina que no tenga el id del contenedor receptor de los datos)
-if (contenedor_ventas){
-  mostrarPropiedades(propiedades_ventas, contenedor_ventas, 3)
-}  
-if (contenedor_ventasCompleto){
-  mostrarPropiedades(propiedades_ventas, contenedor_ventasCompleto)
-}
-if (contenedor_arriendos){
-  mostrarPropiedades(propiedades_alquiler, contenedor_arriendos, 3) 
-}
-if (contenedor_arriendosCompleto){
-  mostrarPropiedades(propiedades_alquiler, contenedor_arriendosCompleto) // Argumentos de mi función :  selector de array , cantidad de objetos seleccionados, contenedor que recibe la información. 
-}
-
-let input1 = document.getElementById('input');
-let enter = document.getElementById('enter');
-
-if(input1){
-  enter.addEventListener('click', () => alert(`${input1.value} Subscrito exitósamente`))
-}
+contenedor_ventas && contenedor_arriendos ?
+(mostrarPropiedades(propiedades_ventas, contenedor_ventas, 3), mostrarPropiedades(propiedades_alquiler, contenedor_arriendos, 3)):
+contenedor_ventasCompleto? mostrarPropiedades(propiedades_ventas, contenedor_ventasCompleto):
+contenedor_arriendosCompleto? mostrarPropiedades(propiedades_alquiler, contenedor_arriendosCompleto):''; 
